@@ -14,4 +14,9 @@ public class CreateOrderSteps {
         Response response = createOrderRequest.sendPostRequestOrder(order, token);
         return response;
     }
+
+    public Response createOrderWithoutAuth(Order order) {
+        Response response = createOrderRequest.sendPostRequestWithoutAuthOrder(order);
+        return response;
+    }
 }

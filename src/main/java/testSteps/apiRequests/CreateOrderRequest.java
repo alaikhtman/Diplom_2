@@ -17,7 +17,18 @@ public class CreateOrderRequest {
                 .and()
                 .body(order)
                 .when()
-                .patch("/api/orders");
+                .post("/api/orders");
+        return response;
+    }
+
+    @Step("Send not-authorized POST request to /api/orders")
+    public Response sendPostRequestWithoutAuthOrder(Order order) {
+        Response response = given()
+                .header("Content-type", "application/json")
+                .and()
+                .body(order)
+                .when()
+                .post("/api/orders");
         return response;
     }
 

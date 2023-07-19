@@ -22,7 +22,7 @@ public class ChangeUserRequest {
 
     }
 
-    @Step("Send PATCH request to /api/auth/user")
+    @Step("Send not-authorized PATCH request to /api/auth/user")
     public Response sendPatchRequestUserWithoutAuth (ChangeUser changeUser) {
         Response response = given()
                 .header("Content-type", "application/json")

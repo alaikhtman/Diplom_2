@@ -18,4 +18,14 @@ public class GetOrderRequest {
                 .get("/api/orders");
         return response;
     }
+
+    @Step("Send not-authorized GET request to /api/orders")
+    public Response sendGetRequestOrderWithoutAuth() {
+        Response response = given()
+                .header("Content-type", "application/json")
+                .and()
+                .when()
+                .get("/api/orders");
+        return response;
+    }
 }
