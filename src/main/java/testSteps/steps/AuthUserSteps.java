@@ -2,6 +2,7 @@ package testSteps.steps;
 
 import dataProvider.AuthUser;
 import dataProvider.User;
+import io.qameta.allure.Step;
 import io.restassured.response.Response;
 import org.apache.commons.lang3.RandomStringUtils;
 import testSteps.apiRequests.AuthUserRequest;
@@ -9,7 +10,6 @@ import testSteps.apiRequests.AuthUserRequest;
 public class AuthUserSteps {
 
     AuthUserRequest authUserRequest = new AuthUserRequest();
-
 
 
     public Response authUser(User user) {

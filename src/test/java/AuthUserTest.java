@@ -4,12 +4,11 @@ import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.Response;
 import org.apache.commons.lang3.RandomStringUtils;
-
 import org.junit.Test;
 import testSteps.BaseUserTest;
 import testSteps.steps.AuthUserSteps;
 import testSteps.steps.CreateUserSteps;
-import testSteps.steps.DeleteUserSteps;
+
 
 public class AuthUserTest extends BaseUserTest {
 

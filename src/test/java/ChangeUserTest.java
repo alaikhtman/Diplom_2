@@ -24,6 +24,7 @@ public class ChangeUserTest extends BaseUserTest {
     @Test
     @DisplayName("Update user: positive update name flow")
     @Description("Update user: positive flow for successfully user update name")
+
     public void updateUserNameTest() {
         Response createUserResponse = createUserSteps.createUser(newUser);
         token = createUserResponse.jsonPath().getString("accessToken").substring(7);
